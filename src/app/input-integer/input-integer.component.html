@@ -1,0 +1,14 @@
+<div class="input-group input-group-sm">
+    <div class="input-group-prepend">
+        <button class="btn btn-primary btn-sm" [ngClass]="maxReached ? 'disabled' : ''" (click)="upQuantity()">+</button>
+    </div>
+    <input 
+        class="form-control small" 
+        type="text" 
+        [ngModel]="quantity"
+        (keyup)="changeQuantity($event)"
+    >
+    <div class="input-group-append">
+        <button class="btn btn-primary btn-sm" [ngClass]="minReached ? 'disabled' : ''" (click)="downQuantity()">-</button>
+    </div>
+</div>
